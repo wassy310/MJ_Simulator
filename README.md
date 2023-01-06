@@ -8,7 +8,7 @@ OpenSiv3Dの練習がてら遊びながらつくってみました。
 ## 概要
 MJロボコン2023のロボットシミュレータです。  
 比率は実際のものとほぼ同じです。  
-![image](https://user-images.githubusercontent.com/74349349/211039488-cc811fe0-9f24-412f-a12c-04ae720155ce.png)
+![image](https://user-images.githubusercontent.com/74349349/211057868-617e0d4a-ed19-4805-98f5-5be162e82bca.png)
 
 ## ダウンロード (どちらかの方法でダウンロードしてください)
 - [ダウンロード](https://github.com/wassy310/MJ_Simulator/releases) > Assets (※ 最新版を選んでください)
