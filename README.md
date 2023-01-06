@@ -2,11 +2,13 @@
 # MJ_Simulator
 MJロボコン用のシミュレータ
 
-## Overview
+## 概要
+MJロボコン2023のロボットシミュレータです。
+開発中です。
 
-## Download & Run
+## ダウンロード と 実行
 `> git clone https://github.com/wassy310/MJ_Simulator.git`  
 `> start ./MJ_Simulator/MJ_simulator/App/MJ_simulator(debug).exe`
 
-## Author
+## 書いた人
 [鷲澤 稜河](https://github.com/wassy310)
