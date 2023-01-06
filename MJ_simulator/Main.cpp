@@ -90,19 +90,16 @@ void Table() {
 }
 
 void Robot() {
-	constexpr Triangle triangle_ba {
+	// ロボットの大きさを変えたいとき -> '70'(1辺の長さ)を変える
+	constexpr Triangle triangle_ba {		// 青ゾーン、自動機
 		125, 350, 70
 	};
 	triangle_ba.rotated(90_deg).draw(Palette::Blue);
-	//constexpr Triangle triangle_bm{
-	//	1750, 275, 70
-	//};
-	//triangle_bm.rotated(40_deg).draw(Palette::Blue);
-	constexpr Triangle triangle_ra{
+	constexpr Triangle triangle_ra{		// 赤ゾーン、自動機
 		125, 650, 70
 	};
 	triangle_ra.rotated(90_deg).draw(Palette::Red);
-	constexpr Triangle triangle_rm{
+	constexpr Triangle triangle_rm{		// 赤ゾーン、手動機
 		1750, 725, 70
 	};
 	triangle_rm.rotated(40_deg).draw(Palette::Red);
@@ -111,14 +108,10 @@ void Robot() {
 void Main() {
 	Window::Resize(1900, 1000);
 
-	const Vec2 defaultPosition(1750, 275);
+	const Vec2 defaultPosition(1750, 275);		// 初期座標、Cキーを押したときに戻ってくる座標
 	Vec2 pos = defaultPosition;
 
 	while (System::Update()) {
-		//ClearPrint();
-		//Print << U"frameBufferSize: " << Window::GetState().frameBufferSize;
-		//Print << Cursor::PosF();
-
 		Field();
 		Table();
 		Robot();
@@ -141,7 +134,7 @@ void Main() {
 		if (KeyC.down()) {
 			pos = defaultPosition;
 		}
-		Triangle {
+		Triangle {		// 青ゾーン、手動機
 			pos, 70
 		}.draw(Palette::Blue);
 	}
