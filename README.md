@@ -1,6 +1,7 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/wassy310/MJ_Simulator)
 # MJ_Simulator
-MJロボコン用のシミュレータ
+MJロボコン用のシミュレータ  
+OpenSiv3Dの練習がてら遊びながらつくってみました。
 
 ※ 開発中
 
