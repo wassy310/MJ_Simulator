@@ -5,5 +5,7 @@ MJロボコン用のシミュレータ
 ## Overview
 
 ## Download
-`git clone https://github.com/wassy310/MJ_Robocon_2023_Okinawa_Simulator.git`
-`start ./MJ_Robocon_2023_Okinawa_Simulator/MJ_Robocon_2023_Okinawa_Simulator/App/MJ_simulator(debug).exe`
+```
+git clone https://github.com/wassy310/MJ_Robocon_2023_Okinawa_Simulator.git
+start ./MJ_Robocon_2023_Okinawa_Simulator/MJ_Robocon_2023_Okinawa_Simulator/App/MJ_simulator(debug).exe
+```
