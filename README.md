@@ -32,4 +32,4 @@ Cキーを押すと初期位置に戻ります。
 ## 参考
 - https://siv3d.github.io/ja-jp/
 - https://github.com/Siv3D/OpenSiv3D
-- [CaseyNelsonさんのVisualizer](https://github.com/CaseyNelson314/Visualizer)には屈服です
+- [CaseyNelsonさんのVisualizer](https://github.com/CaseyNelson314/Visualizer)には感服です
