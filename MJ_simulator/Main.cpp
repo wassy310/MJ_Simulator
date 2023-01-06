@@ -95,10 +95,12 @@ void Robot() {
 		125, 350, 70
 	};
 	triangle_ba.rotated(90_deg).draw(Palette::Blue);
+
 	constexpr Triangle triangle_ra{		// 赤ゾーン、自動機
 		125, 650, 70
 	};
 	triangle_ra.rotated(90_deg).draw(Palette::Red);
+
 	constexpr Triangle triangle_rm{		// 赤ゾーン、手動機
 		1750, 725, 70
 	};
