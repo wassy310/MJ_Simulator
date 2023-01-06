@@ -113,9 +113,9 @@ void Main()
 
 	while (System::Update())
 	{
-		ClearPrint();
-		Print << U"frameBufferSize: " << Window::GetState().frameBufferSize;
-		Print << Cursor::PosF();
+		//ClearPrint();
+		//Print << U"frameBufferSize: " << Window::GetState().frameBufferSize;
+		//Print << Cursor::PosF();
 
 		Field();
 		Table();
