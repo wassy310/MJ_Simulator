@@ -9,6 +9,8 @@ OpenSiv3Dの練習がてら遊びながらつくってみました。
 MJロボコン2023のロボットシミュレータです。  
 比率は実際のものとほぼ同じです。  
 ![image](https://user-images.githubusercontent.com/74349349/211057868-617e0d4a-ed19-4805-98f5-5be162e82bca.png)
+- ロボットのサイズ変更
+  - `Main.cpp` > Robot()関数 > `constexpr Triangle triangle_ba { 125, 350, 70 };`の`70`の部分が1辺の長さです
 
 ## ダウンロード (どちらかの方法でダウンロードしてください)
 - [ダウンロード](https://github.com/wassy310/MJ_Simulator/releases) > Assets (※ 最新版を選んでください)
