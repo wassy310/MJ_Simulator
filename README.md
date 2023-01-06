@@ -13,7 +13,7 @@ MJロボコン2023のロボットシミュレータです。
   - `Main.cpp` > Robot()関数 > `constexpr Triangle triangle_ba { 125, 350, 70 };`の`70`の部分が1辺の長さです
 
 ## ダウンロード (どちらかの方法でダウンロードしてください)
-- [ダウンロード](https://github.com/wassy310/MJ_Simulator/releases) > Assets (※ 最新版を選んでください)
+- [ダウンロード](https://github.com/wassy310/MJ_Simulator/releases) > Assets (※ 最新版を選んでください) > .exeファイル
 - `> git clone https://github.com/wassy310/MJ_Simulator.git`
 
 ## 操作
