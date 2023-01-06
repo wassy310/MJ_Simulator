@@ -90,29 +90,31 @@ void Table() {
 }
 
 void Robot() {
-	Triangle{
+	constexpr Triangle triangle_ba {
 		125, 350, 70
-	}.draw(Palette::Blue);
-	// Triangle{
-	// 	1750, 275, 70
-	// }.draw(Palette::Blue);
-	Triangle{
+	};
+	triangle_ba.rotated(90_deg).draw(Palette::Blue);
+	//constexpr Triangle triangle_bm{
+	//	1750, 275, 70
+	//};
+	//triangle_bm.rotated(40_deg).draw(Palette::Blue);
+	constexpr Triangle triangle_ra{
 		125, 650, 70
-	}.draw(Palette::Red);
-	Triangle{
+	};
+	triangle_ra.rotated(90_deg).draw(Palette::Red);
+	constexpr Triangle triangle_rm{
 		1750, 725, 70
-	}.draw(Palette::Red);
+	};
+	triangle_rm.rotated(40_deg).draw(Palette::Red);
 }
 
-void Main()
-{
+void Main() {
 	Window::Resize(1900, 1000);
 
 	const Vec2 defaultPosition(1750, 275);
 	Vec2 pos = defaultPosition;
 
-	while (System::Update())
-	{
+	while (System::Update()) {
 		//ClearPrint();
 		//Print << U"frameBufferSize: " << Window::GetState().frameBufferSize;
 		//Print << Cursor::PosF();
