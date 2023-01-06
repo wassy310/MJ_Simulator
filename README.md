@@ -11,7 +11,7 @@ MJロボコン2023のロボットシミュレータです。
 ![image](https://user-images.githubusercontent.com/74349349/211039488-cc811fe0-9f24-412f-a12c-04ae720155ce.png)
 
 ## ダウンロード (どちらかの方法でダウンロードしてください)
-- [ダウンロード](https://github.com/wassy310/MJ_Simulator/releases) > Assets
+- [ダウンロード](https://github.com/wassy310/MJ_Simulator/releases) > Assets (※ 最新版を選んでください)
 - `> git clone https://github.com/wassy310/MJ_Simulator.git`
 
 ## 操作
