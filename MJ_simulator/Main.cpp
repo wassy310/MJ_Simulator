@@ -91,11 +91,11 @@ void Table() {
 
 void Robot() {
 	Triangle{
-			125, 350, 70
+		125, 350, 70
 	}.draw(Palette::Blue);
-	Triangle{
-		1750, 275, 70
-	}.draw(Palette::Blue);
+	// Triangle{
+	// 	1750, 275, 70
+	// }.draw(Palette::Blue);
 	Triangle{
 		125, 650, 70
 	}.draw(Palette::Red);
@@ -108,9 +108,8 @@ void Main()
 {
 	Window::Resize(1900, 1000);
 
-	// test
-	Vec2 triangle_b = Scene::Center();
-	Vec2 triangle_r = Scene::Center();
+	const Vec2 defaultPosition(1750, 275);
+	Vec2 pos = defaultPosition;
 
 	while (System::Update())
 	{
@@ -118,35 +117,30 @@ void Main()
 		Print << U"frameBufferSize: " << Window::GetState().frameBufferSize;
 		Print << Cursor::PosF();
 
-		InputGroup inputLeft = KeyLeft;
-		InputGroup inputRight = KeyRight;
-		InputGroup inputFront = KeyUp;
-		InputGroup inputBack = KeyDown;
-		size_t index = 0;
-
 		Field();
 		Table();
 		Robot();
 
-		// test
 		const double delta = (Scene::DeltaTime() * 200);
 		// 上下左右キーで移動
 		if (KeyLeft.pressed()) {
-			triangle_b.x -= delta;
+			pos.x -= delta;
 		}
 		if (KeyRight.pressed()) {
-			triangle_b.x += delta;
+			pos.x += delta;
 		}
 		if (KeyUp.pressed()) {
-			triangle_b.y -= delta;
+			pos.y -= delta;
 		}
 		if (KeyDown.pressed()) {
-			triangle_b.y += delta;
+			pos.y += delta;
 		}
-		// [C] キーが押されたら中央に戻る
+
 		if (KeyC.down()) {
-			triangle_b = Scene::Center();
+			pos = defaultPosition;
 		}
-		Circle{ triangle_b, 50 }.draw();
+		Triangle {
+			pos, 70
+		}.draw(Palette::Blue);
 	}
 }
