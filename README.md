@@ -9,13 +9,9 @@ MJロボコン2023のロボットシミュレータです。
 比率は実際のフィールドと同じです。  
 ![image](https://user-images.githubusercontent.com/74349349/211039488-cc811fe0-9f24-412f-a12c-04ae720155ce.png)
 
-## ダウンロード と 実行 (それぞれどちらかの方法で進めてください)
 ## ダウンロード
-- [ダウンロード](https://github.com/wassy310/MJ_Simulator/releases) > Assets > .exeファイル をクリック
+- [ダウンロード](https://github.com/wassy310/MJ_Simulator/releases) > Assets
 - `> git clone https://github.com/wassy310/MJ_Simulator.git`
-### 実行
-- `> start ./MJ_Simulator/MJ_simulator/App/MJ_simulator(debug).exe`
-- 実行ファイル(.exe)直押し
 
 ## 操作
 キーボードの上下左右キー(矢印のやつ)で動かします。  
