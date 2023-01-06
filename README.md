@@ -7,7 +7,7 @@ MJロボコン用のシミュレータ
 ## Download
 ```sh
 git clone [https://github.com/CaseyNelson314/Visualizer.git](https://github.com/wassy310/MJ_Robocon_2023_Okinawa_Simulator.git)
-start 
+start ./MJ_Robocon_2023_Okinawa_Simulator/MJ_simulator/App/MJ_simulator(debug).exe
 ```
 
 ## Author
