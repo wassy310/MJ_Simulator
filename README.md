@@ -11,11 +11,11 @@ MJロボコン2023のロボットシミュレータです。
 
 ## ダウンロード と 実行 (それぞれどちらかの方法で進めてください)
 ## ダウンロード
-- [ダウンロード](https://github.com/wassy310/MJ_Simulator/releases/download/v0.1.0/MJ_simulator(debug).exe)
+- [ダウンロード](https://github.com/wassy310/MJ_Simulator/releases) > Assets > .exeファイル をクリック
 - `> git clone https://github.com/wassy310/MJ_Simulator.git`
 ### 実行
 - `> start ./MJ_Simulator/MJ_simulator/App/MJ_simulator(debug).exe`
-- 実行ファイル直押し
+- 実行ファイル(.exe)直押し
 
 ## 操作
 キーボードの上下左右キー(矢印のやつ)で動かします。  
