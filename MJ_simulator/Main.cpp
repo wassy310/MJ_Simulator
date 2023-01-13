@@ -1,40 +1,40 @@
-﻿# include <Siv3D.hpp>
+﻿#include <Siv3D.hpp>
 
 void Field() {
-	// whole
+	// 全体
 	Rect{
 		50, 200, 1800, 300
 	}.draw(Palette::Skyblue);
 	Rect{
 		50, 500, 1800, 300
 	}.draw(Palette::Pink);
-	// auto start
+	// 自動機スタートゾーン
 	Rect{
 		50, 200, 150, 300
 	}.drawFrame(0, 1, Palette::Black);
 	Rect{
 		50, 500, 150, 300
 	}.drawFrame(0, 1, Palette::Black);
-	// manual start
+	// 手動機スタートゾーン
 	Rect{
 		1700, 200, 150
 	}.drawFrame(0, 1, Palette::Black);
 	Rect{
 		1700, 650, 150
 	}.drawFrame(0, 1, Palette::Black);
-	// center (blue/red)
+	// 中央分離帯的な
 	Line{
 		50, 500, 1850, 500
 	}.draw(1, Palette::Black);
-	// auto start
+	// 自動機スタートゾーン
 	Line{
 		200, 200, 200, 800
 	}.draw(1, Palette::Black);
-	// cube area
+	// キューブエリア
 	Line{
 		1400, 200, 1400, 800
 	}.draw(1, Palette::Black);
-	// table
+	// テーブルのところ
 	Line{
 		500, 200, 500, 800
 	}.draw(1, Palette::Black);
@@ -48,7 +48,7 @@ void Field() {
 
 void Table() {
 	Circle{
-			200, 400, 13
+		200, 400, 13
 	}.draw()
 		.drawFrame(0, 1, Palette::Black);
 	Circle{
@@ -91,7 +91,7 @@ void Table() {
 
 void Robot() {
 	// ロボットの大きさを変えたいとき -> '70'(1辺の長さ)を変える
-	constexpr Triangle triangle_ba {		// 青ゾーン、自動機
+	constexpr Triangle triangle_ba{		// 青ゾーン、自動機
 		125, 350, 70
 	};
 	triangle_ba.rotated(90_deg).draw(Palette::Blue);
@@ -108,36 +108,66 @@ void Robot() {
 }
 
 void Main() {
+	Field();
+	Table();
+	Robot();
+
 	Window::Resize(1900, 1000);
 
-	const Vec2 defaultPosition(1750, 275);		// 初期座標、Cキーを押したときに戻ってくる座標
-	Vec2 pos = defaultPosition;
+	const double Radius = 13.0;
+
+	// 円座標の配列
+	Array<Vec2> circlePositions
+	{
+	  {200, 400},{500, 300},{800, 400}, {1100, 300}, {1400, 400}, {200, 600}, {500, 700}, {800, 600}, {1100, 700}, {1400, 600}
+	};
+
+	// 三角形のデフォルト座標
+	const Vec2 DefaultPosition{ 1750, 275 };
+
+	// 三角形の座標 
+	Vec2 trianglePos{ 0, 0 };
 
 	while (System::Update()) {
-		Field();
-		Table();
-		Robot();
-
 		const double delta = (Scene::DeltaTime() * 200);
-		// 上下左右キーで移動
+
 		if (KeyLeft.pressed()) {
-			pos.x -= delta;
+			trianglePos.x -= delta;
 		}
+
 		if (KeyRight.pressed()) {
-			pos.x += delta;
+			trianglePos.x += delta;
 		}
+
 		if (KeyUp.pressed()) {
-			pos.y -= delta;
+			trianglePos.y -= delta;
 		}
+
 		if (KeyDown.pressed()) {
-			pos.y += delta;
+			trianglePos.y += delta;
 		}
 
 		if (KeyC.down()) {
-			pos = defaultPosition;
+			trianglePos = DefaultPosition;
 		}
-		Triangle {		// 青ゾーン、手動機
-			pos, 70
-		}.draw(Palette::Blue);
+
+		// 三角形の描画
+		Triangle{ trianglePos, 70 }.draw();
+
+		// 円の描画
+		for (const auto& pos : circlePositions) {
+			Circle{ pos, Radius }.draw();
+		}
+
+		// これより大きい数は最短距離にならない
+		double distance = 999999.0;
+
+		// 最短距離の算出
+		for (const auto& pos : circlePositions) {
+			distance = Min(distance, trianglePos.distance(pos));
+		}
+
+		// 最短距離の表示
+		Print << distance;
 	}
 }
